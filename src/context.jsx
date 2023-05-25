@@ -9,15 +9,15 @@ const reducer = (state, action) => {
   if (action.type === "INC") {
     const newItem = state.products.map((product) => {
       if (product.id === action.payload) {
-        return { ...product, mount: product.amount + 1 };
+        return { ...product, amount: product.amount + 1 };
       }
       return product;
     });
     return { ...state, products: newItem };
   } else if (action.type === "DEC") {
     const newItem = state.products.map((product) => {
-      if (product.uid === action.payload) {
-        return { ...product, mount: product.amount - 1 };
+      if (product.id === action.payload) {
+        return { ...product, amount: product.amount - 1 };
       }
       return product;
     });
