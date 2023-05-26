@@ -65,3 +65,7 @@ nav a:focus {
 .btn {
   @apply rounded-md py-3 px-[6.2rem] text-xs font-bold  tracking-wider;
 }
+
+.btn-card {
+  @apply rounded-md py-3 px-[1rem] text-xs font-bold  tracking-wider;
+}

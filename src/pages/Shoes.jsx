@@ -1,8 +1,10 @@
 import React from "react";
 import { useGlobalContext } from "../context";
+import { useCartContext } from "../cart_context";
 
 const Shoes = () => {
   const { amount, products, addToCart, inc, dec } = useGlobalContext();
+  const { add } = useCartContext();
 
   /* const handleAddToCart = (item) => {
     addToCart(item);
@@ -42,7 +44,7 @@ const Shoes = () => {
                 </div>
                 <div className="flex justify-between w-full ">
                   <p className="mt-1 text-sm text-gray-500">
-                    {product.color[0]}-{product.color[1]}
+                    {/* {product.color[0]}-{product.color[1]} */}
                   </p>
                   <div className=" flex relative">
                     <button onClick={() => dec(product.id)}>-</button>
@@ -54,7 +56,7 @@ const Shoes = () => {
                 </div>
                 <div
                   className="mt-5 justify-center ml-1 cursor-pointer relative"
-                  onClick={() => handleAddToCart(product)}
+                  onClick={() => add(product.id, product.amount, product)}
                 >
                   <a className="btn bg-[#01588f] text-white absolute top-[-1rem]">
                     Add to card

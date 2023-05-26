@@ -7,10 +7,21 @@ const reducer = (state, action) => {
     return { ...state, cart: [] };
   } else if (action.type === "ADD") {
     const { id, amount, products, color, size } = action.payload;
-    const newItem = state.cart.find((product) => product.id === action.payload);
-    if (!newItem) {
-      const item = {
-        id: id + color + size,
+    const existingItemIndex = state.cart.findIndex(
+      (product) =>
+        product.id === id /* && product.color === color && product.size */
+    );
+    if (existingItemIndex !== -1) {
+      const updatedCart = state.cart.map((product, index) => {
+        if (index === existingItemIndex) {
+          return { ...product, amount: product.amount + amount };
+        }
+        return product;
+      });
+      return { ...state, cart: updatedCart };
+    } else {
+      const newItem = {
+        id: id /* + color + size */,
         amount: amount,
         price: products.price,
         name: products.name,
@@ -18,7 +29,7 @@ const reducer = (state, action) => {
         color,
         size,
       };
-      return { ...state, cart: [...state.cart, item] };
+      return { ...state, cart: [...state.cart, newItem] };
     }
   } else if (action.type === "INC_PROD") {
     const newItem = state.cart.map((product) => {
@@ -27,20 +38,20 @@ const reducer = (state, action) => {
       }
       return product;
     });
-    return { ...state, cart: [newItem] };
+    return { ...state, cart: newItem };
   } else if (action.type === "DEC_PROD") {
     const newItem = state.cart.map((product) => {
       if (product.id === action.payload) {
-        return { product, amount: product.amount - 1 };
+        return { ...product, amount: product.amount - 1 };
       }
       return product;
     });
-    return { ...state, cart: [newItem] };
+    return { ...state, cart: newItem };
   } else if (action.type === "DEL") {
     const newItem = state.cart.filter(
-      (product) => product.id != action.payload
+      (product) => product.id !== action.payload
     );
-    return { ...state, cart: [newItem] };
+    return { ...state, cart: newItem };
   }
   return state;
 };
