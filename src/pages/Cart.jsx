@@ -8,11 +8,11 @@ const Cart = () => {
 
   return (
     <>
-      <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <div className="flex gap-10">
+      <div className="bg-white ">
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 ">
+          <div className="flex gap-10 justify-items-center">
             <h2 className="text-2xl font-bold tracking-tight dark-blue">
-              Products
+              Shopping cart item
             </h2>
             <div className="mt-5 justify-center cursor-pointer relative">
               <button
@@ -24,9 +24,9 @@ const Cart = () => {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-[0rem]">
+          <div className="flex flex-wrap justify-start gap-4 p-10 pl-0  ">
             {cart.map((product) => (
-              <div key={product.id} className="group relative w-40">
+              <div key={product.id} className="group relative w-40 mb-10">
                 <div className="aspect-h-1 aspect-w-1 w-40 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-40 ">
                   <img
                     src={product.image}

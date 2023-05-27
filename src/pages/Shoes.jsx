@@ -47,11 +47,21 @@ const Shoes = () => {
                     {/* {product.color[0]}-{product.color[1]} */}
                   </p>
                   <div className=" flex relative">
-                    <button onClick={() => dec(product.id)}>-</button>
+                    <button
+                      className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded-lg"
+                      onClick={() => dec(product.id)}
+                    >
+                      -
+                    </button>
                     <p className="mt-1 text-sm text-gray-500">
                       {product.amount}
                     </p>
-                    <button onClick={() => inc(product.id)}>+</button>
+                    <button
+                      className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded-lg"
+                      onClick={() => inc(product.id)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div
