@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 const Nav = () => {
   return (
     /*    <nav>
@@ -25,7 +26,9 @@ const Nav = () => {
           <div className="flex items-center justify-between h-16">
             <div className="w-full justify-between flex items-center">
               <p className="text-white text-2xl">
-                <NavLink to="/">Shop</NavLink>
+                <NavLink to="/">
+                  <img src={logo} />
+                </NavLink>
               </p>
               <div className="hidden md:block">
                 <div className="flex items-baseline ml-10 space-x-4">
@@ -43,6 +46,7 @@ const Nav = () => {
                   </a>
                 </div>
               </div>
+              <button className="btn-secondary">Login</button>
             </div>
             <div className="block">
               <div className="flex items-center ml-4 md:ml-6"></div>

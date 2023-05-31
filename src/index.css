@@ -69,3 +69,7 @@ nav a:focus {
 .btn-card {
   @apply rounded-md py-3 px-[1rem] text-xs font-bold  tracking-wider;
 }
+
+.btn-secondary {
+  @apply flex rounded-sm py-2 px-[1rem] text-xs font-medium tracking-wider bg-[rgba(186,231,255,0.3)] text-white border-r-transparent;
+}
