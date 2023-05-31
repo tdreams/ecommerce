@@ -5,7 +5,6 @@ import { Carousel } from "react-responsive-carousel";
 import { BiArrowBack } from "react-icons/bi";
 
 const Hero = () => {
-  
   return (
     <div className="relative text-white text-[20px] w-full max-w-[1360px] mx-auto">
       <Carousel
@@ -14,7 +13,6 @@ const Hero = () => {
         showThumbs={false}
         showIndicators={true}
         showStatus={false}
-        renderIndicator={}
         renderArrowPrev={(clickHandler, hasPrev) => (
           <div
             onClick={clickHandler}
