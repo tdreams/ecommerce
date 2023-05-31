@@ -1,7 +1,6 @@
 import React from "react";
 import { useCartContext } from "../cart_context";
 import "../index.css";
-import Wrapper from "../Components/wrapper";
 
 const Cart = () => {
   /* const { cart } = useGlobalContext(); */
