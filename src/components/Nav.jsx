@@ -21,9 +21,9 @@ const Nav = () => {
     </nav> */
 
     <div>
-      <nav className="bg-white primary-color  shadow ">
-        <div className="px-8 mx-auto max-w-7xl">
-          <div className="flex items-center justify-between h-16">
+      <nav className="primary-color shadow ">
+        <div className="px-8 mx-auto max-w-7xl ">
+          <div className="flex  items-center justify-between h-16">
             <div className="w-full justify-between flex items-center">
               <p className="text-white text-2xl">
                 <NavLink to="/">
@@ -42,7 +42,7 @@ const Nav = () => {
                     <NavLink to="/cart">Cart</NavLink>
                   </a>
                   <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <NavLink to="/singleShoes">Contact</NavLink>
+                    Contact
                   </a>
                 </div>
               </div>

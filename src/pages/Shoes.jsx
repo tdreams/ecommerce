@@ -1,6 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../context";
 import { useCartContext } from "../cart_context";
+import { NavLink } from "react-router-dom";
 
 const Shoes = () => {
   const { amount, products, addToCart, inc, dec } = useGlobalContext();
@@ -24,36 +25,40 @@ const Shoes = () => {
                 key={product.id}
                 className="group relative hover:transition-all"
               >
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-[#EDEDED] lg:aspect-none group-hover:opacity-75  lg:h-80">
-                  <img
-                    src={product.image}
-                    alt={product.image}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full group-hover:p-3 "
-                  />
-                </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-gray-700">
-                      <a href={product.href}>
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        {product.name}
-                      </a>
-                    </h3>
+                <NavLink to={`/shoes/${product.id}`}>
+                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-[#EDEDED] lg:aspect-none group-hover:opacity-75  lg:h-80">
+                    <img
+                      src={product.image}
+                      alt={product.image}
+                      className="h-full w-full object-cover object-center lg:h-full lg:w-full group-hover:p-3 "
+                    />
                   </div>
+                  <div className="mt-4 flex justify-between">
+                    <div>
+                      <h3 className="text-sm text-gray-700">
+                        <a href={product.href}>
+                          <span
+                            aria-hidden="true"
+                            className="absolute inset-0"
+                          />
+                          {product.name}
+                        </a>
+                      </h3>
+                    </div>
 
-                  {/* <p className="text-sm font-medium text-gray-900">
+                    {/* <p className="text-sm font-medium text-gray-900">
                     ${product.price}
                   </p> */}
-                </div>
-                <div className="flex w-full ">
-                  <p className="mt-1 text-sm text-gray-500">
-                    {/* {product.color[0]}-{product.color[1]} */}
-                  </p>
-                  <div className=" flex relative">
-                    <p className="text-sm font-medium text-gray-900">
-                      ${product.price}
+                  </div>
+                  <div className="flex w-full ">
+                    <p className="mt-1 text-sm text-gray-500">
+                      {/* {product.color[0]}-{product.color[1]} */}
                     </p>
-                    {/* <button
+                    <div className=" flex relative">
+                      <p className="text-sm font-medium text-gray-900">
+                        ${product.price}
+                      </p>
+                      {/* <button
                       className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded-lg"
                       onClick={() => dec(product.id)}
                     >
@@ -68,9 +73,9 @@ const Shoes = () => {
                     >
                       +
                     </button> */}
+                    </div>
                   </div>
-                </div>
-                {/* <div
+                  {/* <div
                   className="mt-5 justify-center ml-1 cursor-pointer relative"
                   onClick={() => add(product.id, product.amount, product)}
                 >
@@ -78,6 +83,7 @@ const Shoes = () => {
                     Add to card
                   </a>
                 </div> */}
+                </NavLink>
               </div>
             ))}
           </div>
