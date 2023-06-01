@@ -33,7 +33,7 @@ const Feature = () => {
           {category.map((brand) => {
             return (
               <div key={brand.id} className="group relative ">
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-[#EDEDED] lg:aspect-none  lg:h-80">
+                <div className=" max-w-sm max-h-[245px] overflow-hidden rounded-md bg-[#EDEDED] lg:aspect-none  lg:h-80">
                   <img
                     src={brand.image}
                     alt={brand.image}
