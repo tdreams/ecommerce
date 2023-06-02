@@ -67,8 +67,8 @@ const data = [
     name: "AIR JORDAN RETRO 7",
     price: 210.0,
     image:
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3aa0fac0-142b-4533-995d-fc2b26e66d96/air-jordan-7-retro-se-mens-shoes-8mRqbR.png",
-    company: "Only",
+      "https://media.finishline.com/i/finishline/DN9782_001_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+    company: "Jordan",
     description:
       "The Air Jordan Retro 7 Basketball Shoes are a heritage-rich design in which Michael Jordan and his signature sneaker line truly went global. In these sneakers, MJ captured his sixth consecutive scoring title, second consecutive league MVP, an NBA Championship and Finals MVP. If that wasn't enough, MJ followed it up by bringing back a gold medal at the 1992 summer games in Barcelona. From a tech perspective, the 7 includes a neoprene bootie taken from the Nike Huarache and explored new colorways that remain a staple in the Jordan repertoire to this day",
     category: "Casual",
@@ -96,7 +96,7 @@ const data = [
   },
   {
     id: "rec1Ntk7siEEW9ha1",
-    name: "CONVERSE CHUCK TAYLOR ALL STAR",
+    name: "CONVERSE ALL STAR",
     price: 65.0,
     image:
       "https://media.finishline.com/i/finishline/M3310_BLK_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
@@ -144,7 +144,7 @@ const data = [
   },
   {
     id: "recoW8ecgjtKx2Sj2",
-    name: "MEN'S ADIDAS ORIGINALS NMD R1",
+    name: "ADIDAS ORIGINALS NMD R1",
     price: 150.0,
     image:
       "https://media.finishline.com/i/finishline/GW4661_107_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
@@ -159,7 +159,7 @@ const data = [
   },
   {
     id: "recoW8efgjtKx2Sj2",
-    name: "MEN'S ADIDAS ORIGINALS NMD R1",
+    name: "ADIDAS ORIGINALS NMD R1",
     price: 150.0,
     image:
       "https://media.finishline.com/i/finishline/GW4661_107_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
@@ -174,7 +174,7 @@ const data = [
   },
   {
     id: "recoW8ecgjtbgh2Sj2",
-    name: "MEN'S ADIDAS ORIGINALS NMD R1",
+    name: "ADIDAS ORIGINALS NMD R1",
     price: 150.0,
     image:
       "https://media.finishline.com/i/finishline/GW4661_107_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
