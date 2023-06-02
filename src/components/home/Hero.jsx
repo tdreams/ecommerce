@@ -30,10 +30,10 @@ const Hero = () => {
           </div>
         )}
       >
-        <div>
+        <div className="h-60">
           <img
-            src="/slide-1.png"
-            className="aspect-[16/10] md:aspect-auto object-cover"
+            src="https://cdn.discordapp.com/attachments/1109227734359621836/1114065147128983602/fabelous_banner_for_e-commerce_sneaker_web_realistic_OKLCH_63ff5213-a21c-4f32-b145-a9075c6b649e.png"
+            className="aspect-[16/10] md:aspect-auto object-cover "
           />
           <div className="px-[15px] md:px-[40px] py-[10px] md:py-[25px] font-oswald bg-white absolute bottom-[25px] md:bottom-[75px] left-0 text-black/[0.9] text-[15px] md:text-[30px] uppercase font-medium cursor-pointer hover:opacity-90">
             Shop now

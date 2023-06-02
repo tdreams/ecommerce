@@ -2,18 +2,21 @@ import React from "react";
 import Wrapper from "../components/Wrapper";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../context";
+import ShoeDetailsCarousel from "../components/ShoeDetailsCarousel";
+import RelatedShoes from "../components/RelatedShoes";
 
 const SingleShoes = () => {
   const { id } = useParams();
   const { products } = useGlobalContext();
   const newItem = products.find((product) => product.id === id);
   return (
-    <Wrapper>
-      <div className="w-full md:py-20">
+    <div className="w-full md:py-20">
+      <Wrapper>
         <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
           {/* left column start */}
           <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
-            <img src={newItem.image} alt="product" />
+            {/*  <img src={newItem.image} alt="product" /> */}
+            <ShoeDetailsCarousel />
           </div>
           {/* left column end */}
 
@@ -56,7 +59,10 @@ const SingleShoes = () => {
 
               {/* SIZE START */}
               <div id="sizesGrid" className="grid grid-cols-3 gap-2">
-                product size
+                <div className="border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer">
+                  product size
+                </div>
+
                 {/* {p.size.data.map((item, i) => (
                 <div
                   key={i}
@@ -109,10 +115,10 @@ const SingleShoes = () => {
           </div>
           {/* right column end */}
         </div>
-        related product
+        <RelatedShoes />
         {/* <RelatedProducts products={products} /> */}
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </div>
   );
 };
 
