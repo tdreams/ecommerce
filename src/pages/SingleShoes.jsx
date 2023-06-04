@@ -2,12 +2,14 @@ import React from "react";
 import Wrapper from "../components/Wrapper";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../context";
+import { useCartContext } from "../cart_context";
 import ShoeDetailsCarousel from "../components/ShoeDetailsCarousel";
 import RelatedShoes from "../components/RelatedShoes";
 
 const SingleShoes = () => {
   const { id } = useParams();
   const { products } = useGlobalContext();
+  const { add } = useCartContext();
   const newItem = products.find((product) => product.id === id);
   return (
     <div className="w-full md:py-20">
@@ -16,7 +18,7 @@ const SingleShoes = () => {
           {/* left column start */}
           <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
             {/*  <img src={newItem.image} alt="product" /> */}
-            <ShoeDetailsCarousel />
+            <ShoeDetailsCarousel images={newItem.images} />
           </div>
           {/* left column end */}
 
@@ -34,9 +36,7 @@ const SingleShoes = () => {
 
             {/* PRODUCT PRICE */}
             <div className="flex items-center">
-              <p className="mr-2 text-lg font-semibold">
-                MRP : $ {newItem.price}
-              </p>
+              <p className="mr-2 text-xl font-semibold">$ {newItem.price}</p>
             </div>
 
             <div className="text-md font-medium text-black/[0.5]">
@@ -93,17 +93,13 @@ const SingleShoes = () => {
             {/* PRODUCT SIZE RANGE END */}
 
             {/* ADD TO CART BUTTON START */}
-            <button className="w-full py-4 rounded-full bg-[#40A9FF] text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
+            <button
+              className="w-full py-4 rounded-full bg-[#40A9FF] text-white text-lg font-medium transition-transform active:scale-95 mb-10 hover:opacity-75"
+              onClick={() => add(newItem.id, newItem.amount, newItem)}
+            >
               Add to Cart
             </button>
             {/* ADD TO CART BUTTON END */}
-
-            {/* WHISHLIST BUTTON START */}
-            <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
-              Whishlist
-              {/* <IoMdHeartEmpty size={20} /> */}
-            </button>
-            {/* WHISHLIST BUTTON END */}
 
             <div>
               <div className="text-lg font-bold mb-5">Product Details</div>

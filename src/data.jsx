@@ -14,6 +14,37 @@ const data = [
     stock: 4,
     color: ["White", "Black", "Ice Blue"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recEHmzvupvT8ZONH",
@@ -30,6 +61,37 @@ const data = [
     stock: 6,
     color: ["White", "Black", "Siren Red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "rec5NBwZ5zCD9nfF0",
@@ -45,6 +107,14 @@ const data = [
     stock: 4,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: {
+          url: "https://example.com/image1.jpg",
+          name: "Image 1",
+        },
+      },
+    ],
   },
   {
     id: "recd1jIVIEChmiwhe",
@@ -61,6 +131,37 @@ const data = [
     stock: 4,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recoM2MyHJGHLVi5l",
@@ -77,6 +178,37 @@ const data = [
     stock: 4,
     color: ["White", "Black"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recotY5Nh00DQFdkm",
@@ -93,6 +225,37 @@ const data = [
     stock: 4,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "rec1Ntk7siEEW9ha1",
@@ -109,6 +272,37 @@ const data = [
     stock: 2,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recNZ0koOqEmilmoz",
@@ -125,6 +319,37 @@ const data = [
     stock: 3,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recrfxv3EwpvJwvjq",
@@ -141,6 +366,14 @@ const data = [
     stock: 4,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: {
+          url: "https://example.com/image1.jpg",
+          name: "Image 1",
+        },
+      },
+    ],
   },
   {
     id: "recoW8ecgjtKx2Sj2",
@@ -156,6 +389,37 @@ const data = [
     stock: 5,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recoW8efgjtKx2Sj2",
@@ -171,6 +435,37 @@ const data = [
     stock: 5,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "recoW8ecgjtbgh2Sj2",
@@ -186,6 +481,37 @@ const data = [
     stock: 5,
     color: ["green", "red"],
     size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
   },
 ];
 export default data;
