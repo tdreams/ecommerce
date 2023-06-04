@@ -66,6 +66,52 @@ const data = [
         attributes: [
           {
             id: "1",
+            url: "https://media.finishline.com/i/finishline/DQ4122_100_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DQ4122_100_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DQ4122_100_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DQ4122_100_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DQ4122_100_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "rec5NBwZ5zCD9nfF0",
+    name: "Jordan Delta 3 Low",
+    price: 75,
+    image:
+      "https://media.finishline.com/i/finishline/DN2647_100_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+    company: "Jordan",
+    description:
+      "You can't help but look cool in low tops that meld high-end craft with high-tech features. Airy Ripstop and soft, synthetic suede pair with a smooth interior. The result? Classic low-top looks and the premium comfort you expect from Jordan Brand.",
+    category: "Casual",
+    amount: 1,
+    stock: 4,
+    color: ["green", "red"],
+    size: ["XS", "S", "M", "L", "XL"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
             url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
             name: "Image 1",
           },
@@ -90,29 +136,6 @@ const data = [
             name: "Image 2",
           },
         ],
-      },
-    ],
-  },
-  {
-    id: "rec5NBwZ5zCD9nfF0",
-    name: "Jordan Delta 3 Low",
-    price: 75,
-    image:
-      "https://media.finishline.com/i/finishline/DN2647_100_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
-    company: "Jordan",
-    description:
-      "You can't help but look cool in low tops that meld high-end craft with high-tech features. Airy Ripstop and soft, synthetic suede pair with a smooth interior. The result? Classic low-top looks and the premium comfort you expect from Jordan Brand.",
-    category: "Casual",
-    amount: 1,
-    stock: 4,
-    color: ["green", "red"],
-    size: ["XS", "S", "M", "L", "XL"],
-    images: [
-      {
-        attributes: {
-          url: "https://example.com/image1.jpg",
-          name: "Image 1",
-        },
       },
     ],
   },
@@ -183,27 +206,27 @@ const data = [
         attributes: [
           {
             id: "1",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DN9782_001_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
             name: "Image 1",
           },
           {
             id: "2",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DN9782_001_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
           {
             id: "3",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DN9782_001_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
           {
             id: "4",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DN9782_001_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
           {
             id: "5",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DN9782_001_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
         ],
@@ -230,27 +253,27 @@ const data = [
         attributes: [
           {
             id: "1",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DJ5423_100_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
             name: "Image 1",
           },
           {
             id: "2",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DJ5423_100_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
           {
             id: "3",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DJ5423_100_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
           {
             id: "4",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DJ5423_100_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
           {
             id: "5",
-            url: "https://media.finishline.com/i/finishline/DZ5485_052_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            url: "https://media.finishline.com/i/finishline/DJ5423_100_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
             name: "Image 2",
           },
         ],
@@ -368,10 +391,33 @@ const data = [
     size: ["XS", "S", "M", "L", "XL"],
     images: [
       {
-        attributes: {
-          url: "https://example.com/image1.jpg",
-          name: "Image 1",
-        },
+        attributes: [
+          {
+            id: "1",
+            url: "https://media.finishline.com/i/finishline/DQ8961_100_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://media.finishline.com/i/finishline/DQ8961_100_P2?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://media.finishline.com/i/finishline/DQ8961_100_P3?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "4",
+            url: "https://media.finishline.com/i/finishline/DQ8961_100_P4?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+          {
+            id: "5",
+            url: "https://media.finishline.com/i/finishline/DQ8961_100_P5?$default$&w=670&h=670&bg=rgb(237,237,237)",
+            name: "Image 2",
+          },
+        ],
       },
     ],
   },
