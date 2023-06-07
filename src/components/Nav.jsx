@@ -98,7 +98,7 @@ const Nav = () => {
                   <HiShoppingBag />
                   <div className="absolute top-[-8px] -right-3">
                     {totalItems > 0 && (
-                      <span className="text-sm bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center ml-1 mr-6">
+                      <span className="text-sm bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center ml-1 mr-6 mt-1">
                         {totalItems}
                       </span>
                     )}
