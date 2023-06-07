@@ -32,26 +32,28 @@ const Nav = () => {
                   <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     <NavLink to="/shoes">Shoes</NavLink>
                   </a>
-                  <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-3 rounded-md text-md t-2 font-medium flex align-baseline">
-                    <NavLink to="/cart">
-                      <div className="relative flex">
-                        <HiShoppingBag />
-                        <div className="absolute top-[-8px] -right-3">
-                          {totalItems > 0 && (
-                            <span className="text-sm bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center ml-1">
-                              {totalItems}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </NavLink>
-                  </a>
+
                   <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Contact
                   </a>
                 </div>
               </div>
-              <button className="btn-secondary">Login</button>
+              <button>
+                <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-3 rounded-md text-md t-2 font-medium flex align-baseline text-2xl">
+                  <NavLink to="/cart">
+                    <div className="relative flex">
+                      <HiShoppingBag />
+                      <div className="absolute top-[-8px] -right-3">
+                        {totalItems > 0 && (
+                          <span className="text-sm bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center ml-1">
+                            {totalItems}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </NavLink>
+                </a>
+              </button>
             </div>
             <div className="block">
               <div className="flex items-center ml-4 md:ml-6"></div>
@@ -89,23 +91,7 @@ const Nav = () => {
             >
               <NavLink to="/shoes">Shoes</NavLink>
             </a>
-            <a
-              className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              href="/#"
-            >
-              <NavLink to="/cart">
-                <div className="relative flex">
-                  <HiShoppingBag />
-                  <div className="absolute top-[-8px] -right-3">
-                    {totalItems > 0 && (
-                      <span className="text-sm bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center ml-1 mr-6 mt-1">
-                        {totalItems}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </NavLink>
-            </a>
+
             <a
               className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               href="/#"
