@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useCartContext } from "../context/cart_context";
 import { HiShoppingBag } from "react-icons/hi";
 
 const Nav = () => {
+  const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cart } = useCartContext();
   const totalItems = cart.reduce((total, product) => total + product.amount, 0);
@@ -12,10 +13,24 @@ const Nav = () => {
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   console.log(totalItems);
   return (
     <div>
-      <nav className="primary-color shadow">
+      <nav className={`primary-color ${isSticky ? "stickyN top-0 z-40" : ""}`}>
         <div className="px-8 mx-auto max-w-7xl">
           <div className="flex items-center justify-between h-16">
             <div className="w-full justify-between flex items-center">

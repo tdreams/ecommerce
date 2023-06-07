@@ -5,6 +5,8 @@ import { useGlobalContext } from "../context/context";
 import { useCartContext } from "../context/cart_context";
 import ShoeDetailsCarousel from "../components/ShoeDetailsCarousel";
 import RelatedShoes from "../components/RelatedShoes";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SingleShoes = () => {
   const [selectedSize, setSelectedSize] = useState();
@@ -32,6 +34,9 @@ const SingleShoes = () => {
     } else {
       setErrorMessage("Please select a size");
     }
+    toast.success(`${newItem.name} added to cart!`, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
   };
 
   return (
@@ -134,7 +139,7 @@ const SingleShoes = () => {
               {/* SIZE END */}
             </div>
             {/* PRODUCT SIZE RANGE END */}
-
+            <ToastContainer />
             {/* ADD TO CART BUTTON START */}
             <button
               className="w-full py-4 rounded-full bg-[#40A9FF] text-white text-lg font-medium transition-transform active:scale-95 mb-10 hover:opacity-75"

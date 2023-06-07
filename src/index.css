@@ -136,6 +136,13 @@ nav a:focus {
   transition: all 0.25s ease-in-out;
 }
  */
+.stickyN {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .btn {
   @apply rounded-md py-3 px-[6.2rem] text-xs font-bold  tracking-wider;
 }
