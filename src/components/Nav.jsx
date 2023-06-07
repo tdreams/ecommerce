@@ -93,7 +93,18 @@ const Nav = () => {
               className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               href="/#"
             >
-              <NavLink to="/cart">Cart</NavLink>
+              <NavLink to="/cart">
+                <div className="relative flex">
+                  <HiShoppingBag />
+                  <div className="absolute top-[-8px] -right-3">
+                    {totalItems > 0 && (
+                      <span className="text-sm bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center ml-1">
+                        {totalItems}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </NavLink>
             </a>
             <a
               className="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
