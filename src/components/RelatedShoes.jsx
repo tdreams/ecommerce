@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../context/context";
 import { NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import {

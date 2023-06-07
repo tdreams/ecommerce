@@ -6,7 +6,10 @@ const Brands = () => {
   return (
     <>
       <h2 className="flex justify-center font-bold mt-10">SHOP BY Brand</h2>
-      <div className="grid grid-cols-5 divide-gray-400 divide-x mt-6 mb-6  border-gray-400 text-center p-4">
+      <div
+        className="grid grid-cols-2
+      lg:grid-cols-5 lg:divide-gray-400 lg:divide-x lg:mt-6 lg:mb-6 lg:border-gray-400 text-center p-4"
+      >
         {brands.map((brand) => {
           return (
             <div key={brand.id}>

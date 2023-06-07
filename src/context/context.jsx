@@ -1,7 +1,7 @@
 import React from "react";
 //import createContext, useContext,useReducer from react
 import { createContext, useContext, useState, useReducer } from "react";
-import data from "./data"; //import our data
+import data from "../data"; //import our data
 
 const ProductContext = createContext();
 
@@ -18,6 +18,14 @@ const reducer = (state, action) => {
     const newItem = state.products.map((product) => {
       if (product.id === action.payload) {
         return { ...product, amount: product.amount - 1 };
+      }
+      return product;
+    });
+    return { ...state, products: newItem };
+  } else if (action.type === "RES") {
+    const newItem = state.products.map((product) => {
+      if (product.id === action.payload) {
+        return { ...product, amount: product.amount / product.amount };
       }
       return product;
     });
@@ -45,8 +53,11 @@ const ProductProvider = ({ children }) => {
   const dec = (id) => {
     dispatch({ type: "DEC", payload: id });
   };
+  const res = (id) => {
+    dispatch({ type: "RES", payload: id });
+  };
   return (
-    <ProductContext.Provider value={{ ...state, inc, dec }}>
+    <ProductContext.Provider value={{ ...state, inc, dec, res }}>
       {children}
     </ProductContext.Provider>
   );

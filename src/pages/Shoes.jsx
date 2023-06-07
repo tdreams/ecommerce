@@ -1,6 +1,6 @@
 import React from "react";
-import { useGlobalContext } from "../context";
-import { useCartContext } from "../cart_context";
+import { useGlobalContext } from "../context/context";
+import { useCartContext } from "../context/cart_context";
 import { NavLink } from "react-router-dom";
 
 const Shoes = () => {

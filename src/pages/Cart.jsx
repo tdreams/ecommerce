@@ -1,5 +1,5 @@
 import React from "react";
-import { useCartContext } from "../cart_context";
+import { useCartContext } from "../context/cart_context";
 import "../index.css";
 import Wrapper from "../components/Wrapper";
 import CartItem from "../components/CartItem";
@@ -7,6 +7,11 @@ import CartItem from "../components/CartItem";
 const Cart = () => {
   /* const { cart } = useGlobalContext(); */
   const { amount, cart, clear, decProd, incProd, del } = useCartContext();
+
+  // Calculate the total amount
+  const total = cart.reduce((accumulator, product) => {
+    return accumulator + product.price * product.amount;
+  }, 0);
 
   return (
     <div className="w-full md:py-20">
@@ -39,7 +44,7 @@ const Cart = () => {
                     <div className="uppercase text-[1rem] md:text-lg font-medium text-black">
                       Total
                     </div>
-                    <div>$ 75</div>
+                    <div>${total.toFixed(2)}</div>
                   </div>
                   <div className="text-sm md:text-[1rem] py-5 border-t mt-5 border-gray-400 text-gray-800 font-normal">
                     The subtotal of your order displays the overall price,
@@ -61,7 +66,7 @@ const Cart = () => {
         )}
         {/* This is empty screen */}
         {cart.length < 1 && (
-          <div className="flex-[2] flex flex-col items-center pb-[50px] md:mt-14">
+          <div className="flex-[2] flex flex-col items-center pb-[50px] md:mt-24">
             <img
               src="https://cdn.dribbble.com/users/2058104/screenshots/4198771/dribbble.jpg"
               alt="empty image of cart"

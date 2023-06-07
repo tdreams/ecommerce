@@ -6,11 +6,11 @@ const reducer = (state, action) => {
   if (action.type === "CLEAR") {
     return { ...state, cart: [] };
   } else if (action.type === "ADD") {
-    const { id, amount, products, color, size } = action.payload;
+    const { id, amount, selectedSize, products, color, size } = action.payload;
     const existingItemIndex = state.cart.findIndex(
-      (product) =>
-        product.id === id /* && product.color === color && product.size */
+      (product) => product.id === id && product.selectedSize === selectedSize
     );
+
     if (existingItemIndex !== -1) {
       const updatedCart = state.cart.map((product, index) => {
         if (index === existingItemIndex) {
@@ -21,37 +21,38 @@ const reducer = (state, action) => {
       return { ...state, cart: updatedCart };
     } else {
       const newItem = {
-        id: id /* + color + size */,
+        id: id,
         amount: amount,
         price: products.price,
         name: products.name,
         image: products.image,
         color,
-        size,
+        selectedSize,
       };
       return { ...state, cart: [...state.cart, newItem] };
     }
   } else if (action.type === "INC_PROD") {
-    const newItem = state.cart.map((product) => {
+    const updatedCart = state.cart.map((product) => {
       if (product.id === action.payload) {
         return { ...product, amount: product.amount + 1 };
       }
       return product;
     });
-    return { ...state, cart: newItem };
+    return { ...state, cart: updatedCart };
   } else if (action.type === "DEC_PROD") {
-    const newItem = state.cart.map((product) => {
+    const updatedCart = state.cart.map((product) => {
       if (product.id === action.payload) {
         return { ...product, amount: product.amount - 1 };
       }
       return product;
     });
-    return { ...state, cart: newItem };
+    return { ...state, cart: updatedCart };
   } else if (action.type === "DEL") {
-    const newItem = state.cart.filter(
-      (product) => product.id !== action.payload
+    const { id, selectedSize } = action.payload;
+    const updatedCart = state.cart.filter(
+      (product) => product.id !== id || product.selectedSize !== selectedSize
     );
-    return { ...state, cart: newItem };
+    return { ...state, cart: updatedCart };
   }
   return state;
 };
@@ -68,8 +69,29 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "CLEAR" });
   };
 
-  const add = (id, amount, products, color, size) => {
-    dispatch({ type: "ADD", payload: { id, amount, products, color, size } });
+  /* const add = (id, amount, selectedSize, products, color, size) => {
+    dispatch({
+      type: "ADD",
+      payload: { id, amount, selectedSize, products, color, size },
+    });
+  }; */
+
+  const add = (id, amount, selectedSize, products, color, size) => {
+    const existingItemIndex = state.cart.findIndex(
+      (product) => product.id === id && product.selectedSize === selectedSize
+    );
+
+    if (existingItemIndex !== -1) {
+      dispatch({
+        type: "INC_PROD",
+        payload: state.cart[existingItemIndex].id,
+      });
+    } else {
+      dispatch({
+        type: "ADD",
+        payload: { id, amount, selectedSize, products, color, size },
+      });
+    }
   };
 
   const incProd = (id) => {
@@ -80,8 +102,8 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "DEC_PROD", payload: id });
   };
 
-  const del = (id) => {
-    dispatch({ type: "DEL", payload: id });
+  const del = (id, selectedSize) => {
+    dispatch({ type: "DEL", payload: { id, selectedSize } });
   };
 
   return (

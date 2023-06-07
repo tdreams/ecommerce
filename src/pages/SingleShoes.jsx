@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Wrapper from "../components/Wrapper";
 import { useParams } from "react-router-dom";
-import { useGlobalContext } from "../context";
-import { useCartContext } from "../cart_context";
+import { useGlobalContext } from "../context/context";
+import { useCartContext } from "../context/cart_context";
 import ShoeDetailsCarousel from "../components/ShoeDetailsCarousel";
 import RelatedShoes from "../components/RelatedShoes";
 
 const SingleShoes = () => {
+  const [selectedSize, setSelectedSize] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
   const { id } = useParams();
-  const { products } = useGlobalContext();
+  const { products, inc, dec, res } = useGlobalContext();
   const { add } = useCartContext();
   const newItem = products.find((product) => product.id === id);
+
+  const handleAddToCart = () => {
+    if (selectedSize) {
+      add(newItem.id, newItem.amount, selectedSize, newItem);
+      res(newItem.id);
+      setErrorMessage("");
+    } else {
+      setErrorMessage("Please select a size");
+    }
+  };
+
   return (
     <div className="w-full md:py-20">
       <Wrapper>
@@ -45,6 +58,39 @@ const SingleShoes = () => {
             <div className="text-md font-medium text-black/[0.5] mb-20">
               {`(Also includes all applicable duties)`}
             </div>
+            {/* QUANTITY START */}
+            <div className="flex justify-between mb-2">
+              <div className="flex mb-2">
+                <div className="text-md font-semibold">Quantity</div>
+              </div>
+
+              <div className="">
+                <div className="flex flex-row text-md font-medium text-black/[0.5] cursor-pointer gap-4 align-middle">
+                  <button
+                    className="p-2  w-6 h-6  rounded-full bg-[#40a9ffef] text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center justify-center align-middle"
+                    onClick={() => dec(newItem.id)}
+                  >
+                    <div className="text-xl align-middle flex justify-center mb-1">
+                      -
+                    </div>
+                  </button>
+                  {newItem.amount}
+                  <button
+                    className="p-2  w-6 h-6 rounded-full bg-[#40a9ffef] text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center justify-center"
+                    onClick={() => inc(newItem.id)}
+                  >
+                    <div className="text-xl align-middle flex justify-center mb-1">
+                      +
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* QUANTITY END */}
+            {/* ERROR MESSAGE */}
+            {errorMessage && (
+              <p className="text-red-500 mb-4">{errorMessage}</p>
+            )}
 
             {/* PRODUCT SIZE RANGE START */}
             <div className="mb-10">
@@ -59,43 +105,30 @@ const SingleShoes = () => {
 
               {/* SIZE START */}
               <div id="sizesGrid" className="grid grid-cols-3 gap-2">
-                <div className="border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer">
-                  product size
-                </div>
-
-                {/* {p.size.data.map((item, i) => (
-                <div
-                  key={i}
-                  className={`border rounded-md text-center py-3 font-medium ${
-                    item.enabled
-                      ? "hover:border-black cursor-pointer"
-                      : "cursor-not-allowed bg-black/[0.1] opacity-50"
-                  } ${selectedSize === item.size ? "border-black" : ""}`}
-                  onClick={() => {
-                    setSelectedSize(item.size);
-                    setShowError(false);
-                  }}
-                >
-                  {item.size}
-                </div>
-              ))} */}
+                {newItem.sizes.map((size) => (
+                  <div
+                    key={size.value}
+                    className={`border rounded-md text-center py-3 font-medium ${
+                      size.enabled
+                        ? "hover:border-[#40A9FF] cursor-pointer"
+                        : "cursor-not-allowed bg-black/[0.1] opacity-50"
+                    } ${selectedSize === size.value ? "border-[#40A9FF]" : ""}`}
+                    onClick={() => {
+                      setSelectedSize(size.value);
+                    }}
+                  >
+                    {size.value}
+                  </div>
+                ))}
               </div>
               {/* SIZE END */}
-
-              {/* SHOW ERROR START */}
-              {/* {showError && (
-              <div className="text-red-600 mt-1">
-                Size selection is required
-              </div>
-            )} */}
-              {/* SHOW ERROR END */}
             </div>
             {/* PRODUCT SIZE RANGE END */}
 
             {/* ADD TO CART BUTTON START */}
             <button
               className="w-full py-4 rounded-full bg-[#40A9FF] text-white text-lg font-medium transition-transform active:scale-95 mb-10 hover:opacity-75"
-              onClick={() => add(newItem.id, newItem.amount, newItem)}
+              onClick={handleAddToCart}
             >
               Add to Cart
             </button>
