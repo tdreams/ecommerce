@@ -1,60 +1,64 @@
 import React, { createContext, useContext, useReducer } from "react";
 
 const CartContext = createContext(); //create context for cart
-
+//add a counter for the number of items in the cart
 const reducer = (state, action) => {
-  if (action.type === "CLEAR") {
-    return { ...state, cart: [] };
-  } else if (action.type === "ADD") {
-    const { id, amount, selectedSize, products, color, size } = action.payload;
-    const existingItemIndex = state.cart.findIndex(
-      (product) => product.id === id && product.selectedSize === selectedSize
-    );
+  switch (action.type) {
+    case "CLEAR":
+      return { ...state, cart: [] };
+    case "ADD":
+      const { id, amount, selectedSize, products, color, size } =
+        action.payload;
+      const existingItemIndex = state.cart.findIndex(
+        (product) => product.id === id && product.selectedSize === selectedSize
+      );
 
-    if (existingItemIndex !== -1) {
-      const updatedCart = state.cart.map((product, index) => {
-        if (index === existingItemIndex) {
-          return { ...product, amount: product.amount + amount };
+      if (existingItemIndex !== -1) {
+        const updatedCart = state.cart.map((product, index) => {
+          if (index === existingItemIndex) {
+            return { ...product, amount: product.amount + amount };
+          }
+          return product;
+        });
+        return { ...state, cart: updatedCart };
+      } else {
+        const newItem = {
+          id,
+          amount,
+          price: products.price,
+          name: products.name,
+          image: products.image,
+          color,
+          selectedSize,
+        };
+        return { ...state, cart: [...state.cart, newItem] };
+      }
+    case "INC_PROD":
+      const updatedCartInc = state.cart.map((product) => {
+        if (product.id === action.payload) {
+          return { ...product, amount: product.amount + 1 };
         }
         return product;
       });
-      return { ...state, cart: updatedCart };
-    } else {
-      const newItem = {
-        id: id,
-        amount: amount,
-        price: products.price,
-        name: products.name,
-        image: products.image,
-        color,
-        selectedSize,
-      };
-      return { ...state, cart: [...state.cart, newItem] };
-    }
-  } else if (action.type === "INC_PROD") {
-    const updatedCart = state.cart.map((product) => {
-      if (product.id === action.payload) {
-        return { ...product, amount: product.amount + 1 };
-      }
-      return product;
-    });
-    return { ...state, cart: updatedCart };
-  } else if (action.type === "DEC_PROD") {
-    const updatedCart = state.cart.map((product) => {
-      if (product.id === action.payload) {
-        return { ...product, amount: product.amount - 1 };
-      }
-      return product;
-    });
-    return { ...state, cart: updatedCart };
-  } else if (action.type === "DEL") {
-    const { id, selectedSize } = action.payload;
-    const updatedCart = state.cart.filter(
-      (product) => product.id !== id || product.selectedSize !== selectedSize
-    );
-    return { ...state, cart: updatedCart };
+      return { ...state, cart: updatedCartInc };
+    case "DEC_PROD":
+      const updatedCartDec = state.cart.map((product) => {
+        if (product.id === action.payload) {
+          return { ...product, amount: product.amount - 1 };
+        }
+        return product;
+      });
+      return { ...state, cart: updatedCartDec };
+    case "DEL":
+      const updatedCartDel = state.cart.filter(
+        (product) =>
+          product.id !== action.payload.id ||
+          product.selectedSize !== action.payload.selectedSize
+      );
+      return { ...state, cart: updatedCartDel };
+    default:
+      return state;
   }
-  return state;
 };
 
 const initialState = {

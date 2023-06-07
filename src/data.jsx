@@ -11,7 +11,7 @@ const data = [
     category: "Casual",
     shipping: true,
     amount: 1,
-    stock: 4,
+    stock: 14,
     color: ["White", "Black", "Ice Blue"],
     sizes: [
       { value: "7.5", enabled: true },
@@ -130,7 +130,7 @@ const data = [
       "You can't help but look cool in low tops that meld high-end craft with high-tech features. Airy Ripstop and soft, synthetic suede pair with a smooth interior. The result? Classic low-top looks and the premium comfort you expect from Jordan Brand.",
     category: "Casual",
     amount: 1,
-    stock: 4,
+    stock: 2,
     color: ["green", "red"],
     sizes: [
       { value: "7.5", enabled: true },
@@ -250,7 +250,7 @@ const data = [
     category: "Casual",
     shipping: true,
     amount: 1,
-    stock: 4,
+    stock: 10,
     color: ["White", "Black"],
     sizes: [
       { value: "7.5", enabled: true },
@@ -310,7 +310,7 @@ const data = [
     category: "Casual",
     shipping: true,
     amount: 1,
-    stock: 4,
+    stock: 8,
     color: ["green", "red"],
     sizes: [
       { value: "7.5", enabled: true },

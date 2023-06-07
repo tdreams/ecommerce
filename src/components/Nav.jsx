@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { useCartContext } from "../context/cart_context";
+import { HiShoppingBag } from "react-icons/hi";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cart } = useCartContext();
+  const totalItems = cart.reduce((total, product) => total + product.amount, 0);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  console.log(totalItems);
   return (
     <div>
       <nav className="primary-color shadow">
@@ -21,15 +25,26 @@ const Nav = () => {
                 </NavLink>
               </p>
               <div className="hidden md:block">
-                <div className="flex items-baseline ml-10 space-x-4">
+                <div className="flex items-baseline ml-10 space-x-4 align-baseline">
                   <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     <NavLink to="/">Home</NavLink>
                   </a>
                   <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     <NavLink to="/shoes">Shoes</NavLink>
                   </a>
-                  <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <NavLink to="/cart">Cart</NavLink>
+                  <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-3 rounded-md text-md t-2 font-medium flex align-baseline">
+                    <NavLink to="/cart">
+                      <div className="relative flex">
+                        <HiShoppingBag />
+                        <div className="absolute top-[-8px] -right-3">
+                          {totalItems > 0 && (
+                            <span className="text-sm bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center ml-1">
+                              {totalItems}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </NavLink>
                   </a>
                   <a className="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Contact

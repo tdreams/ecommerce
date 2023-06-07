@@ -13,7 +13,17 @@ const SingleShoes = () => {
   const { products, inc, dec, res } = useGlobalContext();
   const { add } = useCartContext();
   const newItem = products.find((product) => product.id === id);
+  const handleDecQuantiy = () => {
+    if (newItem.amount > 1) {
+      dec(newItem.id);
+    }
+  };
 
+  const handleIncQuantiy = () => {
+    if (newItem.amount <= newItem.stock) {
+      inc(newItem.id);
+    }
+  };
   const handleAddToCart = () => {
     if (selectedSize) {
       add(newItem.id, newItem.amount, selectedSize, newItem);
@@ -68,7 +78,7 @@ const SingleShoes = () => {
                 <div className="flex flex-row text-md font-medium text-black/[0.5] cursor-pointer gap-4 align-middle">
                   <button
                     className="p-2  w-6 h-6  rounded-full bg-[#40a9ffef] text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center justify-center align-middle"
-                    onClick={() => dec(newItem.id)}
+                    onClick={handleDecQuantiy}
                   >
                     <div className="text-xl align-middle flex justify-center mb-1">
                       -
@@ -77,7 +87,7 @@ const SingleShoes = () => {
                   {newItem.amount}
                   <button
                     className="p-2  w-6 h-6 rounded-full bg-[#40a9ffef] text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center justify-center"
-                    onClick={() => inc(newItem.id)}
+                    onClick={handleIncQuantiy}
                   >
                     <div className="text-xl align-middle flex justify-center mb-1">
                       +
